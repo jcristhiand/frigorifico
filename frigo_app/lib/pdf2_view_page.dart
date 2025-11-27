@@ -5,8 +5,8 @@ class PdfViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Información del Peperoni")),
-      body: SfPdfViewer.asset('assets/mono_peperoni.pdf'),
+      appBar: AppBar(title: Text("Información del Milan")),
+      body: SfPdfViewer.asset('assets/mono_milan.pdf'),
     );
   }
 }

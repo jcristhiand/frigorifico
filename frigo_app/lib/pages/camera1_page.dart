@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../pdf_view_page.dart';
 import 'package:intl/intl.dart';
+import '../pages/conservacion1_page.dart';
+import '../pages/etiqueta1_page.dart';
 
 class Camera1Page extends StatelessWidget {
   const Camera1Page({super.key});
@@ -147,7 +149,7 @@ class Camera1Page extends StatelessWidget {
                     ],
                   ),
                   const Text(
-                    "130",
+                    "1500",
                     style: TextStyle(
                       color: primaryColor,
                       fontSize: 22,
@@ -185,8 +187,26 @@ class Camera1Page extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _BottomButton(text: "Etiqueta"),
-                _BottomButton(text: "Conservación"),
+                _BottomButton(
+                  text: "Etiqueta",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const EtiquetaPage()),
+                    );
+                  },
+                ),
+                _BottomButton(
+                  text: "Conservación",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ConservacionPage(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
 
@@ -200,22 +220,27 @@ class Camera1Page extends StatelessWidget {
 
 class _BottomButton extends StatelessWidget {
   final String text;
+  final VoidCallback onTap;
 
-  const _BottomButton({required this.text});
+  const _BottomButton({super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-      decoration: BoxDecoration(
-        color: Color(0xFFD1E1E8),
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: Color(0xFF15464D),
-          fontWeight: FontWeight.w600,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        decoration: BoxDecoration(
+          color: const Color(0xFFD9E4E2),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 16,
+            color: Color(0xFF15464D),
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
     );

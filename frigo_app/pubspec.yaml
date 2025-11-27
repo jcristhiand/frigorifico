@@ -64,7 +64,15 @@ flutter:
     - assets/plano.jpg
     - assets/zonas.jpg
     - assets/peperoni.png
+    - assets/peperoni_etiqueta.png
     - assets/mono_peperoni.pdf
+    - assets/calabresa.png
+    - assets/calabresa_etiqueta.jpeg
+    - assets/mono_calabresa.pdf
+    - assets/milan.png
+    - assets/milan_etiqueta.png
+    - assets/mono_milan.pdf
+
 
   #   - images/a_dot_ham.jpeg
 

@@ -24,5 +24,5 @@ La app permite visualizar:
 - Las condiciones de conservación requeridas.
 - Las etiquetas asociadas a cada producto.
 - Las cantidades disponibles en inventario.
-- 
+
 Este prototipo fue desarrollado como parte de un proyecto académico de la facultad, con el objetivo de aplicar conceptos de diseño y desarrollo de software en un contexto real.
